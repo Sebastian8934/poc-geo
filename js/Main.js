@@ -142,9 +142,7 @@ let selectOpcion = document.getElementById("selectOpcion");
 
 // Escuchar el evento 'message' para recibir datos de la página principal
 window.addEventListener('message', function(event) {
-
     const mensaje = event.data;
-
     changeRouteSpot(mensaje)
 });
 
@@ -155,50 +153,52 @@ function changeRouteSpot(value) {
     let jsonRoute = null;
     let jsonpoint = null;
 
+
     if (value === "value1"){
-        
         jsonpoint = json_Puntosturisticos_3[0];
+        geojsonLayer.remove();
 
     } else if (value === "value2") {
-        jsonpoint = json_Puntosturisticos_3[0];
+        // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[1];
         jsonRoute = json_Ruta_4[0];
 
     } else if (value === "value3") {
-        jsonpoint = json_Puntosturisticos_3[0];
+        // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[2];
         jsonRoute = json_Ruta_4[1];
 
     } else if (value === "value4") {
-        jsonpoint = json_Puntosturisticos_3[0];
+        // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[3];
         jsonRoute = json_Ruta_4[2];
 
     } else if (value ==="value5"){
-        jsonpoint = json_Puntosturisticos_3[0];
+        // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[4];
         jsonRoute = json_Ruta_4[3];
         
     } else if (value ==="value6"){
-        jsonpoint = json_Puntosturisticos_3[0];
+        // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[5];
         jsonRoute = json_Ruta_4[4];
-    } else {
-        if (geojsonLayer) {
-            geojsonLayer.remove(); // Elimina si existe
-            geojsonLayer = null; // Restablece a null
-        }
-        if (layer_Ruta_4) {
-            layer_Ruta_4.remove(); // Elimina si existe
-            layer_Ruta_4 = null; // Restablece a null
-        }
-        return; // Sale de la función
-    }
+    } 
+    // else {
+    //     if (geojsonLayer) {
+    //         geojsonLayer.remove();
+    //         geojsonLayer = null;
+    //     }
+    //     if (layer_Ruta_4) {
+    //         layer_Ruta_4.remove();
+    //         layer_Ruta_4 = null;
+    //     }
+    //     return;
+    // }
 
     //Remueve los marcardores
-    if (geojsonLayer){
-        geojsonLayer.remove();
-    }
+    // if (geojsonLayer){
+    //     geojsonLayer.remove();
+    // }
     
 
     //Marcadores - puntos
@@ -239,7 +239,6 @@ function changeRouteSpot(value) {
         layer_Ruta_4.remove();
     }
 
-
     //Rutas
     if (jsonRoute){
         layer_Ruta_4 = new L.geoJson(jsonRoute, {
@@ -257,6 +256,7 @@ function changeRouteSpot(value) {
     map.addLayer(layer_Ruta_4);
 
 }
+
 changeRouteSpot(null);
 
 // Para mostrar el modal
@@ -301,7 +301,9 @@ function showModal(name, img, description, url, lugarA, lugarB, lugarC, lugarD, 
     descrip3.textContent = DescripC;
     descrip4.textContent = DescripD;
     placeUrl.href = url;
+    placeUrl.target = '_blank';
 
+    
     modal.style.display = "block";
 }
 
@@ -341,6 +343,5 @@ function showSlide(index) {
 function moveSlide(n) {
     showSlide(currentSlide + n);
 }
-
 
 showSlide(currentSlide);

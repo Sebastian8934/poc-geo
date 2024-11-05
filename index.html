@@ -114,10 +114,7 @@
 
         <div id ="fin_modal" class="down">
           <div class="boton">
-            <a id="place-url" >
-              <img src="./css/images/icons/Frame 14442 (1).svg" alt="icono" class="icon">
-              Más Información
-            </a>
+            <a id="place-url"><img src="./css/images/icons/Frame 14442 (1).svg" alt="icono" class="icon">Más Información</a>
           </div>
         </div>
 
@@ -269,26 +266,33 @@
       map.addLayer(layer_Mun_atlantico_2);
 
       // llama el modal
-
       function modal_Puntosturisticos_4(feature, layer) {
         layer.on({
           click: function (e) {
             const propertyOption = e.target.feature.properties;
             for (var i in e.target._eventParents) {
-              showModal(
-                propertyOption.NOMBRE,
-                propertyOption.img,
-                propertyOption.description,
-                propertyOption.url,
-                propertyOption.lugarA,
-                propertyOption.lugarB,
-                propertyOption.lugarC,
-                propertyOption.lugarD,
-                propertyOption.DescripA,
-                propertyOption.DescripB,
-                propertyOption.DescripC,
-                propertyOption.DescripD,
-              );
+              
+              if (propertyOption.img) {
+                
+                showModal(
+                  propertyOption.NOMBRE,
+                  propertyOption.img,
+                  propertyOption.description,
+                  propertyOption.url,
+                  propertyOption.lugarA,
+                  propertyOption.lugarB,
+                  propertyOption.lugarC,
+                  propertyOption.lugarD,
+                  propertyOption.DescripA,
+                  propertyOption.DescripB,
+                  propertyOption.DescripC,
+                  propertyOption.DescripD
+                );
+                
+              } else {
+                // showPopup();
+              }
+
             }
           },
         });
@@ -306,19 +310,20 @@
           case "2":
             // Final Tesoro//
             return L.icon({
-              iconUrl:"./css/images/icons/tesoro.svg",
+              iconUrl:"./css/images/icons/tesoro.jpeg",
               iconSize: [20, 20],
               iconAnchor: [20, 20]  
           });
           case "3":
             // Lugares de interés//
             return L.icon({
-              iconUrl: "./css/images/icons/sitios de interes1 (1).svg",
+              iconUrl: "./css/images/icons/actor.jpeg",
               iconSize: [20, 20],
               iconAnchor: [20, 20]
           });
         } 
       }
+
       var geojsonLayer = new L.geoJSON(json_Puntosturisticos_3, {
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });

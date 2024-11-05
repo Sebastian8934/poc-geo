@@ -358,6 +358,11 @@ button:hover {
     align-items: center;
 }
 
+/* Cambiar el cursor */
+
+ #map {
+    cursor: url(images/icons/puntero1.png), auto;
+  }
 
 /* Responsive */
 

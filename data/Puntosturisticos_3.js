@@ -20,8 +20,8 @@ var json_Puntosturisticos_3 = [
             "css/images/Turismo/Barranquilla/Barranquilla2.jpg",
             "css/images/Turismo/Barranquilla/Barranquilla3.jpg",
             "css/images/Turismo/Barranquilla/Barranquilla4.jpg"
-          ]},
-
+          ]
+        },
         geometry: {
           type: "Point",
           coordinates: [-74.8069007, 11.0041139],
@@ -50,7 +50,8 @@ var json_Puntosturisticos_3 = [
           DescripC:"bicada a poca distancia, esta ciénaga es un lugar perfecto para la observación de aves y el ecoturismo. Sus manglares y biodiversidad la hacen un destino único para los amantes de la naturaleza.",
           lugarD: "Cascada del salto",
           DescripD:"Este es un atractivo natural menos conocido pero muy hermoso, ubicado en las cercanías de Tubará. Es ideal para los que disfrutan del senderismo y los paisajes naturales, con un salto de agua refrescante.",
-          url: "https://www.google.com/maps?q=10.938377668367258, -75.02805926685055",
+          url: "https://qa-tesoroatlantico.gse.com.co/tesoro/tubara/",
+          // target="_blank" href="https://qa-tesoroatlantico.gse.com.co/tesoro/tubara/"
           img:[
             "https://i0.wp.com/notasdeactualidad.com/wp-content/uploads/2019/10/IMG-20191020-WA0044.jpg?w=1280&ssl=1",
             "https://irp.cdn-website.com/760b2e87/dms3rep/multi/MPV-82.jpg",

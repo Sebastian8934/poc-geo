@@ -1,30 +1,77 @@
 /* *************** Cambio del la malla del mundo ******************* */
 
 //Selecciona las clases de los check de la malla
+// let selectCheckMun = document.querySelectorAll('.leaflet-control-layers-selector');
 
+// selectCheckMun.forEach(element => {
+//     element.addEventListener("change",function (event) {
+//         if (selectCheckMun[0].checked === true && selectCheckMun[1].checked === false) {
+//             changeMun(0);
+//         } else if (selectCheckMun[1].checked === true && selectCheckMun[0].checked === false) {
+//             changeMun(1);
+//         } else if (selectCheckMun[0].checked === true && selectCheckMun[1].checked === true){
+//             changeMun(0);
+//         } else {
+//             layer_Mun_atlantico_2.remove();
+//         }
+//     })
+// });
 
-let selectCheckMun = document.querySelectorAll('.leaflet-control-layers-selector');
+// function changeMun(valueJson) {
 
-selectCheckMun.forEach(element => {
-    element.addEventListener("change",function (event) {
-        if (selectCheckMun[0].checked === true && selectCheckMun[1].checked === false) {
-            changeMun(0);
-        } else if (selectCheckMun[1].checked === true && selectCheckMun[0].checked === false) {
-            changeMun(1);
-        } else if (selectCheckMun[0].checked === true && selectCheckMun[1].checked === true){
-            changeMun(0);
-        } else {
-            layer_Mun_atlantico_2.remove();
-        }
-    })
-});
+//     let style_Mun;
+
+//     if (valueJson === 0) {
+//         style_Mun = {
+//             pane: 'pane_Mun_atlantico_2',
+//             opacity: 1,
+//             color: '#33691e',
+//             // color: '#ffff',
+//             dashArray: '',
+//             lineCap: 'square',
+//             lineJoin: 'bevel',
+//             weight: 2.0,
+//             fillOpacity: 0,
+//             interactive: false,
+//         }
+//     } else if (valueJson === 1) {
+//         style_Mun = {
+//             pane: 'pane_Mun_atlantico_2',
+//             opacity: 1,
+//             // color: '#33691e',
+//             color: '#ffff',
+//             dashArray: '',
+//             lineCap: 'square',
+//             lineJoin: 'bevel',
+//             weight: 2.0,
+//             fillOpacity: 0,
+//             interactive: false,
+//         }
+//     }
+
+//     // //Elimina la malla del atlantico , ya creada
+//     layer_Mun_atlantico_2.remove();
+
+//     layer_Mun_atlantico_2 = new L.geoJson(json_Mun_atlantico_2[valueJson], {
+//         attribution: '',
+//         interactive: false,
+//         dataVar: 'json_Mun_atlantico_2',
+//         layerName: 'layer_Mun_atlantico_2',
+//         pane: 'pane_Mun_atlantico_2',
+//         style: style_Mun,
+//     });
+
+//     bounds_group.addLayer(layer_Mun_atlantico_2);
+//     map.addLayer(layer_Mun_atlantico_2);
+// }
+
+/*  No se que paso aquí ? */
 
 function getColorById (id){
     switch (id){
         case 1: return "#AA3210"
     }
 }
-
 
 function styleById (feature) {
     return {
@@ -41,14 +88,15 @@ function changeImage(imageSrc) {
     const currentImage = document.getElementById('currentImage');
     currentImage.src = imageSrc; // Cambia la fuente de la imagen principal
 }
+
 // Hover //
 function highlightFeature(e) {
-var layer = e.target;
-    layer.setStyle({
-        weight: 3,
-        color: "none",
-        fillOpacity: 0.3,
-    });
+    var layer = e.target;
+        layer.setStyle({
+            weight: 3,
+            color: "none",
+            fillOpacity: 0.3,
+        });
 }
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -81,60 +129,13 @@ var layer_municipios_atlantico = L.geoJson(json_Mun_atlantico_2, {
 map.fitBounds(layer_municipios_atlantico.getBounds());
 map.fitBounds(geojson.getBounds());
 
-function changeMun(valueJson) {
-
-    let style_Mun;
-
-    if (valueJson === 0) {
-        style_Mun = {
-            pane: 'pane_Mun_atlantico_2',
-            opacity: 1,
-            color: '#33691e',
-            // color: '#ffff',
-            dashArray: '',
-            lineCap: 'square',
-            lineJoin: 'bevel',
-            weight: 2.0,
-            fillOpacity: 0,
-            interactive: false,
-        }
-    } else if (valueJson === 1) {
-        style_Mun = {
-            pane: 'pane_Mun_atlantico_2',
-            opacity: 1,
-            // color: '#33691e',
-            color: '#ffff',
-            dashArray: '',
-            lineCap: 'square',
-            lineJoin: 'bevel',
-            weight: 2.0,
-            fillOpacity: 0,
-            interactive: false,
-        }
-    }
-
-    // //Elimina la malla del atlantico , ya creada
-    layer_Mun_atlantico_2.remove();
-
-    layer_Mun_atlantico_2 = new L.geoJson(json_Mun_atlantico_2[valueJson], {
-        attribution: '',
-        interactive: false,
-        dataVar: 'json_Mun_atlantico_2',
-        layerName: 'layer_Mun_atlantico_2',
-        pane: 'pane_Mun_atlantico_2',
-        style: style_Mun,
-    });
-
-    bounds_group.addLayer(layer_Mun_atlantico_2);
-    map.addLayer(layer_Mun_atlantico_2);
-}
-
 var layer_municipios_atlantico = L.geoJson(json_Mun_atlantico_2, {
     style: styleById,
     onEachFeature: onEachFeature
 }).addTo(map);
 
-/* ************ Modal y Cambio de puntos y rutas  ***************** */
+
+/* ************ Puntos y rutas  ***************** */
 
 // Obtener el valor del input
 let selectOpcion = document.getElementById("selectOpcion");
@@ -151,73 +152,42 @@ function changeRouteSpot(value) {
 
     let jsonSpot = null;
     let jsonRoute = null;
-    let jsonpoint = null;
+    // let jsonpoint = null;
 
+    if (value === "value0"){
+        jsonSpot = null;
+        jsonRoute = null;
 
-    if (value === "value1"){
-        jsonpoint = json_Puntosturisticos_3[0];
-        geojsonLayer.remove();
+    } else if (value === "value1") {
+        // jsonpoint = json_Puntosturisticos_3[0];
+        jsonSpot = json_Puntosturisticos_3[1];
+        jsonRoute = json_Ruta_4[1];
 
     } else if (value === "value2") {
         // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[1];
-        jsonRoute = json_Ruta_4[0];
+        jsonSpot = json_Puntosturisticos_3[2];
+        jsonRoute = json_Ruta_4[2];
 
     } else if (value === "value3") {
         // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[2];
-        jsonRoute = json_Ruta_4[1];
-
-    } else if (value === "value4") {
-        // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[3];
-        jsonRoute = json_Ruta_4[2];
+        jsonRoute = json_Ruta_4[3];
 
-    } else if (value ==="value5"){
+    } else if (value ==="value4"){
         // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[4];
-        jsonRoute = json_Ruta_4[3];
+        jsonRoute = json_Ruta_4[4];
         
-    } else if (value ==="value6"){
+    } else if (value ==="value5"){
         // jsonpoint = json_Puntosturisticos_3[0];
         jsonSpot = json_Puntosturisticos_3[5];
-        jsonRoute = json_Ruta_4[4];
-    } 
-    // else {
-    //     if (geojsonLayer) {
-    //         geojsonLayer.remove();
-    //         geojsonLayer = null;
-    //     }
-    //     if (layer_Ruta_4) {
-    //         layer_Ruta_4.remove();
-    //         layer_Ruta_4 = null;
-    //     }
-    //     return;
-    // }
+        jsonRoute = json_Ruta_4[5];
+    }
 
-    //Remueve los marcardores
-    // if (geojsonLayer){
-    //     geojsonLayer.remove();
-    // }
-    
+    // Remueve los marcardores
+    geojsonLayer.remove();
 
-    //Marcadores - puntos
-    geojsonPoint = new L.geoJson(jsonpoint, {
-        attribution: '',
-        interactive: true,
-        dataVar: 'json_Puntosturisticos_3',
-        layerName: 'geojsonPoint',
-        pane: 'pane_Puntosturisticos_3',
-        onEachFeature: modal_Puntosturisticos_4,
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
-        },
-    });
-    bounds_group.addLayer(geojsonPoint);
-    map.addLayer(geojsonPoint);
-
-
-
+    //Marcadores
     geojsonLayer = new L.geoJson(jsonSpot, {
         attribution: '',
         interactive: true,
@@ -229,38 +199,50 @@ function changeRouteSpot(value) {
             return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
         },
     });
-
-
     bounds_group.addLayer(geojsonLayer);
     map.addLayer(geojsonLayer);
 
+
     //Remueve las rutas
-    if (layer_Ruta_4) {
-        layer_Ruta_4.remove();
-    }
+    layer_Ruta_4.remove();
 
     //Rutas
-    if (jsonRoute){
-        layer_Ruta_4 = new L.geoJson(jsonRoute, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json_Ruta_4',
-            layerName: 'layer_Ruta_4',
-            pane: 'pane_Ruta_4',
-            // onEachFeature: pop_Ruta_4,
-            style: style_Ruta_4_0,
-        });
-    }
-    
+    layer_Ruta_4 = new L.geoJson(jsonRoute, {
+        attribution: '',
+        interactive: false,
+        dataVar: 'json_Ruta_4',
+        layerName: 'layer_Ruta_4',
+        pane: 'pane_Ruta_4',
+        // onEachFeature: pop_Ruta_4,
+        style: style_Ruta_4_0,
+    });
     bounds_group.addLayer(layer_Ruta_4);
     map.addLayer(layer_Ruta_4);
 
+    //Marcadores - puntos
+    // geojsonPoint = new L.geoJson(jsonpoint, {
+    //     attribution: '',
+    //     interactive: true,
+    //     dataVar: 'json_Puntosturisticos_3',
+    //     layerName: 'geojsonPoint',
+    //     pane: 'pane_Puntosturisticos_3',
+    //     onEachFeature: modal_Puntosturisticos_4,
+    //     pointToLayer: function (feature, latlng) {
+    //         return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
+    //     },
+    // });
+    // bounds_group.addLayer(geojsonPoint);
+    // map.addLayer(geojsonPoint);
+
 }
 
-changeRouteSpot(null);
+// changeRouteSpot(null);
+
+/* Modal */ 
 
 // Para mostrar el modal
-function showModal(name, img, description, url, lugarA, lugarB, lugarC, lugarD, DescripA, DescripB, DescripC, DescripD ) {
+function showModal( name, img, description, url, lugarA, lugarB, lugarC, lugarD, DescripA, DescripB, DescripC, DescripD ) {
+
     const modal = document.getElementById("myModal");
     const placeName = document.getElementById("place-name");
     const placeImg1 = document.getElementById("place-img1");
@@ -272,14 +254,14 @@ function showModal(name, img, description, url, lugarA, lugarB, lugarC, lugarD, 
     const placethumb3 = document.getElementById ("thumb3");
     const placethumb4 = document.getElementById ("thumb4");
     const placeDescription = document.getElementById("place-description");
-    const lugar1 = document.getElementById("lugar1");
-    const lugar2 = document.getElementById("lugar2");
-    const lugar3 = document.getElementById("lugar3");
-    const lugar4 = document.getElementById("lugar4");
-    const descrip1 = document.getElementById("descrip1");
-    const descrip2 = document.getElementById("descrip2");
-    const descrip3 = document.getElementById("descrip3");
-    const descrip4 = document.getElementById("descrip4");
+    // const lugar1 = document.getElementById("lugar1");
+    // const lugar2 = document.getElementById("lugar2");
+    // const lugar3 = document.getElementById("lugar3");
+    // const lugar4 = document.getElementById("lugar4");
+    // const descrip1 = document.getElementById("descrip1");
+    // const descrip2 = document.getElementById("descrip2");
+    // const descrip3 = document.getElementById("descrip3");
+    // const descrip4 = document.getElementById("descrip4");
     const placeUrl = document.getElementById("place-url");
 
     placeName.textContent = name;
@@ -292,18 +274,18 @@ function showModal(name, img, description, url, lugarA, lugarB, lugarC, lugarD, 
     placethumb3.src = img[2];
     placethumb4.src = img[3];
     placeDescription.textContent = description;
-    lugar1.textContent = lugarA;
-    lugar2.textContent = lugarB;
-    lugar3.textContent = lugarC;
-    lugar4.textContent = lugarD;
-    descrip1.textContent = DescripA;
-    descrip2.textContent = DescripB;
-    descrip3.textContent = DescripC;
-    descrip4.textContent = DescripD;
+
+    // lugar1.textContent = lugarA;
+    // lugar2.textContent = lugarB;
+    // lugar3.textContent = lugarC;
+    // lugar4.textContent = lugarD;
+    // descrip1.textContent = DescripA;
+    // descrip2.textContent = DescripB;
+    // descrip3.textContent = DescripC;
+    // descrip4.textContent = DescripD;
+
     placeUrl.href = url;
     placeUrl.target = '_blank';
-
-    
     modal.style.display = "block";
 }
 
@@ -345,3 +327,19 @@ function moveSlide(n) {
 }
 
 showSlide(currentSlide);
+
+
+
+/* Popup */
+
+const popupContainer = document.getElementById('popupContainer');
+
+function showPopup(event) {
+    popupContainer.style.display = 'block';
+    popupContainer.style.left = `${event.layerPoint.x}px`; 
+    popupContainer.style.top = `${event.layerPoint.y}px`;
+}
+
+function closePopup(event) {
+    popupContainer.style.display = 'none';
+}

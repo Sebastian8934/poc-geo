@@ -28,6 +28,16 @@
   </head>
   <body>
 
+    <!-- Popup -->
+
+    <!-- Contenedor del popup -->
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+          <h2>Bienvenido al Popup</h2>
+          <!-- <p>Este popup aparece cuando pasas el mouse sobre el elemento.</p> -->
+        </div>
+    </div>
+
     <!-- Modal -->
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -70,8 +80,8 @@
 
         </div>
 
-        <h1 class="information">Que hacer aquí</h1>
-        <div id = middle_modal class="between">
+        <!-- <h1 class="information">Que hacer aquí</h1>
+        <div id="middle_modal" class="between">
           <div class="grid">
             <div class="grid-item">
               <div class="grid-item1">
@@ -110,7 +120,7 @@
               <p id="descrip4" class="pcaracter"></p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div id ="fin_modal" class="down">
           <div class="boton">
@@ -241,7 +251,7 @@
           dashArray: "",
           lineCap: "square",
           lineJoin: "bevel",
-          weight: 2.5,
+          weight: 2.0,
           fillOpacity: 0,
           interactive: false,
         };
@@ -273,7 +283,6 @@
             for (var i in e.target._eventParents) {
               
               if (propertyOption.img) {
-                
                 showModal(
                   propertyOption.NOMBRE,
                   propertyOption.img,
@@ -288,14 +297,23 @@
                   propertyOption.DescripC,
                   propertyOption.DescripD
                 );
-                
-              } else {
-                // showPopup();
               }
 
             }
           },
+          // mouseover:function(e) {
+          //   const propertyOption = e.target.feature.properties;
+
+          //   showPopup(e);
+
+          //   // if (!propertyOption.img) {
+          //   // } 
+          // },
+          // mouseout:function(e) {
+          //   closePopup(e);
+          // },
         });
+
       }
       
       function style_Puntosturisticos_3_0(feature) {
@@ -310,14 +328,14 @@
           case "2":
             // Final Tesoro//
             return L.icon({
-              iconUrl:"./css/images/icons/tesoro.jpeg",
+              iconUrl:"./css/images/icons/tesoro.png",
               iconSize: [20, 20],
               iconAnchor: [20, 20]  
           });
           case "3":
             // Lugares de interés//
             return L.icon({
-              iconUrl: "./css/images/icons/actor.jpeg",
+              iconUrl: "./css/images/icons/actor.png",
               iconSize: [20, 20],
               iconAnchor: [20, 20]
           });
@@ -337,7 +355,6 @@
 
       bounds_group.addLayer(geojsonLayer);
       map.addLayer(geojsonLayer);
-
 
       
       function style_Ruta_4_0(feature) {
@@ -381,7 +398,7 @@
       var baseMaps = {};
       var overlaysTree = [
         { label: "Waze (World)", layer: layer_WazeWorld_1 },
-        { label: "ESRI Satellite", layer: layer_ESRISatellite_0 },
+        // { label: "ESRI Satellite", layer: layer_ESRISatellite_0 },
       ];
       var lay = L.control.layers.tree(null, overlaysTree, {
         collapsed: true,

@@ -180,7 +180,8 @@ a#place-url {
     align-items: center;
     text-decoration: none;
     color: #ffffff; /* Color del enlace */
-    background-color: rgba(44, 50, 58, 255);
+    /* background-color: rgba(44, 50, 58, 255); */
+    background-color: rgba(100, 5, 5, 0.8);
     padding: 10px 15px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -190,7 +191,7 @@ a#place-url {
 }
 
 a#place-url:hover {
-    background-color: #007bff; /* Fondo al pasar el mouse */
+    background-color: rgba(100, 5, 5, 0.8); /* Fondo al pasar el mouse */
     color: #fff; /* Color del texto al pasar el mouse */
 }
 
@@ -358,11 +359,34 @@ button:hover {
     align-items: center;
 }
 
+
+
 /* Cambiar el cursor */
 
  #map {
-    cursor: url(images/icons/puntero1.png), auto;
+    cursor: url(images/icons/puntero1.png) 24 24, auto;
   }
+
+    /* Popup */
+
+    /* Estilos básicos para el contenedor del popup */
+    .popup-container {
+        display: none; 
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        border-radius: 8px;
+        color: #fff;
+        width: 200px;
+        z-index: 2;
+    }
+
+    /* Contenido del popup */
+    .popup-content {
+        text-align: center;
+    }
+
+
 
 /* Responsive */
 

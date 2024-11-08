@@ -200,13 +200,13 @@
 
 .leaflet-zoom-anim .leaflet-zoom-hide {
 	visibility: hidden;
-	}
+}
 
 
 /* cursors */
 
 .leaflet-interactive {
-	cursor: pointer;
+	/* cursor: pointer; */
 	}
 .leaflet-grab {
 	cursor: -webkit-grab;

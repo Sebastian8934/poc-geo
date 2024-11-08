@@ -4,7 +4,7 @@ var json_Puntosturisticos_3 = [
       {
         type: "Feature",
         properties: {
-          id: 1,
+          id: 2,
           NOMBRE: "Barranquilla",
           description:"Barranquilla, es la capital del departamento Atlántico de Colombia y es un desbordante puerto marino, bordeado por el río Magdalena. La ciudad es conocida por su enorme Carnaval, que reúne a artistas con extravagantes disfraces, carros elaborados y música cumbia.",
           lugarA: "Zoológico de barranquilla",
@@ -51,7 +51,6 @@ var json_Puntosturisticos_3 = [
           lugarD: "Cascada del salto",
           DescripD:"Este es un atractivo natural menos conocido pero muy hermoso, ubicado en las cercanías de Tubará. Es ideal para los que disfrutan del senderismo y los paisajes naturales, con un salto de agua refrescante.",
           url: "https://qa-tesoroatlantico.gse.com.co/tesoro/tubara/",
-          // target="_blank" href="https://qa-tesoroatlantico.gse.com.co/tesoro/tubara/"
           img:[
             "https://i0.wp.com/notasdeactualidad.com/wp-content/uploads/2019/10/IMG-20191020-WA0044.jpg?w=1280&ssl=1",
             "https://irp.cdn-website.com/760b2e87/dms3rep/multi/MPV-82.jpg",
@@ -66,21 +65,21 @@ var json_Puntosturisticos_3 = [
         },
       },
       // Uicación puntos de interés //
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3
-        },
-        "geometry": {
-          "type": "MultiPoint",
-          "coordinates": [
-            [-75.00118524295874, 10.905500180101544],
-            [-75.03028349925869, 10.94390813473088],
-            [-75.0427226206322, 10.905878531658818],
-            [-74.9298477474678, 10.88188499156902]
-          ]
-        }
-      }
+      // {
+      //   "type": "Feature",
+      //   "properties": {
+      //     "id": 3
+      //   },
+      //   "geometry": {
+      //     "type": "MultiPoint",
+      //     "coordinates": [
+      //       [-75.00118524295874, 10.905500180101544],
+      //       [-75.03028349925869, 10.94390813473088],
+      //       [-75.0427226206322, 10.905878531658818],
+      //       [-74.9298477474678, 10.88188499156902]
+      //     ]
+      //   }
+      // }
       
     ],
   },
@@ -117,21 +116,21 @@ var json_Puntosturisticos_3 = [
           coordinates: [-75.035858,  10.829092],
         },
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3
-        },
-        "geometry": {
-          "type": "MultiPoint",
-          "coordinates": [
-            [-75.09165521089542, 10.84929548649179],
-            [-75.07597840585062, 10.884672794344294],
-            [-75.066972581749, 10.819483578899543],
-            [-74.99859502838474, 10.808016670597278],
-          ]
-        }
-      }
+      // {
+      //   "type": "Feature",
+      //   "properties": {
+      //     "id": 3
+      //   },
+      //   "geometry": {
+      //     "type": "MultiPoint",
+      //     "coordinates": [
+      //       [-75.09165521089542, 10.84929548649179],
+      //       [-75.07597840585062, 10.884672794344294],
+      //       [-75.066972581749, 10.819483578899543],
+      //       [-74.99859502838474, 10.808016670597278],
+      //     ]
+      //   }
+      // }
     ],
   },
   {
@@ -168,21 +167,21 @@ var json_Puntosturisticos_3 = [
           coordinates: [-75.107922,  10.748716],
         },
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3
-        },
-        "geometry": {
-          "type": "MultiPoint",
-          "coordinates": [
-            [-75.09972311251174, 10.763008612014268],
-            [-75.1031256743147, 10.734833077230707],
-            [-75.09921672052812, 10.751651008366368],
-            [-75.0856986441673, 10.766867409611802]
-          ]
-        }
-      }
+      // {
+      //   "type": "Feature",
+      //   "properties": {
+      //     "id": 3
+      //   },
+      //   "geometry": {
+      //     "type": "MultiPoint",
+      //     "coordinates": [
+      //       [-75.09972311251174, 10.763008612014268],
+      //       [-75.1031256743147, 10.734833077230707],
+      //       [-75.09921672052812, 10.751651008366368],
+      //       [-75.0856986441673, 10.766867409611802]
+      //     ]
+      //   }
+      // }
     ],
   },
   {
@@ -219,21 +218,21 @@ var json_Puntosturisticos_3 = [
           coordinates: [-75.143244,  10.610414],
         },
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3
-        },
-        "geometry": {
-          "type": "MultiPoint",
-          "coordinates": [
-            [-75.21757216612951, 10.66073669498964,],
-            [-75.24847121388426, 10.684353562949372],
-            [-75.08951277932373, 10.6600619003869],
-            [-75.09809584814448, 10.624295648008934,]
-          ]
-        }
-      },
+      // {
+      //   "type": "Feature",
+      //   "properties": {
+      //     "id": 3
+      //   },
+      //   "geometry": {
+      //     "type": "MultiPoint",
+      //     "coordinates": [
+      //       [-75.21757216612951, 10.66073669498964,],
+      //       [-75.24847121388426, 10.684353562949372],
+      //       [-75.08951277932373, 10.6600619003869],
+      //       [-75.09809584814448, 10.624295648008934,]
+      //     ]
+      //   }
+      // },
     ],
   },
   {
@@ -269,21 +268,21 @@ var json_Puntosturisticos_3 = [
           coordinates: [-75.123706,  10.494762],
         },
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3
-        },
-        "geometry": {
-          "type": "MultiPoint",
-          "coordinates": [
-            [-75.07412851277972, 10.528326459360773,],
-            [-75.2380242201709, 10.55352882499517,],
-            [-75.21238925057801, 10.576250499053963,],
-            [-75.13002115155824, 10.416337006901125,]
-          ]
-        }
-      },
+      // {
+      //   "type": "Feature",
+      //   "properties": {
+      //     "id": 3
+      //   },
+      //   "geometry": {
+      //     "type": "MultiPoint",
+      //     "coordinates": [
+      //       [-75.07412851277972, 10.528326459360773,],
+      //       [-75.2380242201709, 10.55352882499517,],
+      //       [-75.21238925057801, 10.576250499053963,],
+      //       [-75.13002115155824, 10.416337006901125,]
+      //     ]
+      //   }
+      // },
     ],
   },
 ];

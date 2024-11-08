@@ -138,103 +138,101 @@ var layer_municipios_atlantico = L.geoJson(json_Mun_atlantico_2, {
 /* ************ Puntos y rutas  ***************** */
 
 // Obtener el valor del input
-let selectOpcion = document.getElementById("selectOpcion");
+// let selectOpcion = document.getElementById("selectOpcion");
 
+// // Escuchar el evento 'message' para recibir datos de la página principal
+// window.addEventListener('message', function(event) {
+//     const mensaje = event.data;
+//     changeRouteSpot(mensaje)
+// });
 
-// Escuchar el evento 'message' para recibir datos de la página principal
-window.addEventListener('message', function(event) {
-    const mensaje = event.data;
-    changeRouteSpot(mensaje)
-});
+// function changeRouteSpot(value) {
 
+//     let jsonSpot = null;
+//     let jsonRoute = null;
+//     // let jsonpoint = null;
 
-function changeRouteSpot(value) {
+//     if (value === "value0"){
+//         jsonSpot = null;
+//         jsonRoute = null;
 
-    let jsonSpot = null;
-    let jsonRoute = null;
-    // let jsonpoint = null;
+//     } else if (value === "value1") {
+//         // jsonpoint = json_Puntosturisticos_3[0];
+//         jsonSpot = json_Puntosturisticos_3[1];
+//         jsonRoute = json_Ruta_4[1];
 
-    if (value === "value0"){
-        jsonSpot = null;
-        jsonRoute = null;
+//     } else if (value === "value2") {
+//         // jsonpoint = json_Puntosturisticos_3[0];
+//         jsonSpot = json_Puntosturisticos_3[2];
+//         jsonRoute = json_Ruta_4[2];
 
-    } else if (value === "value1") {
-        // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[1];
-        jsonRoute = json_Ruta_4[1];
+//     } else if (value === "value3") {
+//         // jsonpoint = json_Puntosturisticos_3[0];
+//         jsonSpot = json_Puntosturisticos_3[3];
+//         jsonRoute = json_Ruta_4[3];
 
-    } else if (value === "value2") {
-        // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[2];
-        jsonRoute = json_Ruta_4[2];
-
-    } else if (value === "value3") {
-        // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[3];
-        jsonRoute = json_Ruta_4[3];
-
-    } else if (value ==="value4"){
-        // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[4];
-        jsonRoute = json_Ruta_4[4];
+//     } else if (value ==="value4"){
+//         // jsonpoint = json_Puntosturisticos_3[0];
+//         jsonSpot = json_Puntosturisticos_3[4];
+//         jsonRoute = json_Ruta_4[4];
         
-    } else if (value ==="value5"){
-        // jsonpoint = json_Puntosturisticos_3[0];
-        jsonSpot = json_Puntosturisticos_3[5];
-        jsonRoute = json_Ruta_4[5];
-    }
+//     } else if (value ==="value5"){
+//         // jsonpoint = json_Puntosturisticos_3[0];
+//         jsonSpot = json_Puntosturisticos_3[5];
+//         jsonRoute = json_Ruta_4[5];
+//     }
 
-    // Remueve los marcardores
-    geojsonLayer.remove();
+//     // Remueve los marcardores
+//     geojsonLayer.remove();
 
-    //Marcadores
-    geojsonLayer = new L.geoJson(jsonSpot, {
-        attribution: '',
-        interactive: true,
-        dataVar: 'json_Puntosturisticos_3',
-        layerName: 'geojsonLayer',
-        pane: 'pane_Puntosturisticos_3',
-        onEachFeature: modal_Puntosturisticos_4,
-        pointToLayer: function (feature, latlng) {
-            return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
-        },
-    });
-    bounds_group.addLayer(geojsonLayer);
-    map.addLayer(geojsonLayer);
+//     //Marcadores
+//     geojsonLayer = new L.geoJson(jsonSpot, {
+//         attribution: '',
+//         interactive: true,
+//         dataVar: 'json_Puntosturisticos_3',
+//         layerName: 'geojsonLayer',
+//         pane: 'pane_Puntosturisticos_3',
+//         onEachFeature: modal_Puntosturisticos_4,
+//         pointToLayer: function (feature, latlng) {
+//             return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
+//         },
+//     });
+//     bounds_group.addLayer(geojsonLayer);
+//     map.addLayer(geojsonLayer);
 
 
-    //Remueve las rutas
-    layer_Ruta_4.remove();
+//     //Remueve las rutas
+//     layer_Ruta_4.remove();
 
-    //Rutas
-    layer_Ruta_4 = new L.geoJson(jsonRoute, {
-        attribution: '',
-        interactive: false,
-        dataVar: 'json_Ruta_4',
-        layerName: 'layer_Ruta_4',
-        pane: 'pane_Ruta_4',
-        // onEachFeature: pop_Ruta_4,
-        style: style_Ruta_4_0,
-    });
-    bounds_group.addLayer(layer_Ruta_4);
-    map.addLayer(layer_Ruta_4);
+//     //Rutas
+//     layer_Ruta_4 = new L.geoJson(jsonRoute, {
+//         attribution: '',
+//         interactive: false,
+//         dataVar: 'json_Ruta_4',
+//         layerName: 'layer_Ruta_4',
+//         pane: 'pane_Ruta_4',
+//         // onEachFeature: pop_Ruta_4,
+//         style: style_Ruta_4_0,
+//     });
+//     bounds_group.addLayer(layer_Ruta_4);
+//     map.addLayer(layer_Ruta_4);
 
-    //Marcadores - puntos
-    // geojsonPoint = new L.geoJson(jsonpoint, {
-    //     attribution: '',
-    //     interactive: true,
-    //     dataVar: 'json_Puntosturisticos_3',
-    //     layerName: 'geojsonPoint',
-    //     pane: 'pane_Puntosturisticos_3',
-    //     onEachFeature: modal_Puntosturisticos_4,
-    //     pointToLayer: function (feature, latlng) {
-    //         return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
-    //     },
-    // });
-    // bounds_group.addLayer(geojsonPoint);
-    // map.addLayer(geojsonPoint);
+//     //Marcadores - puntos
+//     // geojsonPoint = new L.geoJson(jsonpoint, {
+//     //     attribution: '',
+//     //     interactive: true,
+//     //     dataVar: 'json_Puntosturisticos_3',
+//     //     layerName: 'geojsonPoint',
+//     //     pane: 'pane_Puntosturisticos_3',
+//     //     onEachFeature: modal_Puntosturisticos_4,
+//     //     pointToLayer: function (feature, latlng) {
+//     //         return L.marker(latlng, { icon: style_Puntosturisticos_3_0(feature) });
+//     //     },
+//     // });
+//     // bounds_group.addLayer(geojsonPoint);
+//     // map.addLayer(geojsonPoint);
 
-}
+// }
 
 // changeRouteSpot(null);
 

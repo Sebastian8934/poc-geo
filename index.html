@@ -48,6 +48,7 @@
 
           <div class="column">
             <h3 id="place-name"></h3>
+            <h4 id="place-titular"></h4>
             <p id="place-description"></p>
           </div>
 
@@ -73,8 +74,8 @@
             <div class="thumbnails">
               <img id="thumb1" class="thumb" src="" alt="" />
               <img id="thumb2" class="thumb" src="" alt="">
-              <img id="thumb3" class="thumb" src="" alt="" />
-              <img id="thumb4" class="thumb" src="" alt="" />
+              <!-- <img id="thumb3" class="thumb" src="" alt="" />
+              <img id="thumb4" class="thumb" src="" alt="" /> -->
             </div>
           </div>
 
@@ -286,6 +287,7 @@
                 showModal(
                   propertyOption.NOMBRE,
                   propertyOption.img,
+                  propertyOption.titular,
                   propertyOption.description,
                   propertyOption.url,
                   propertyOption.lugarA,
@@ -375,7 +377,6 @@
         }
 
       }
-
 
       map.createPane("pane_Ruta_4");
       map.getPane("pane_Ruta_4").style.zIndex = 500;

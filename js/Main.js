@@ -239,7 +239,7 @@ var layer_municipios_atlantico = L.geoJson(json_Mun_atlantico_2, {
 /* Modal */ 
 
 // Para mostrar el modal
-function showModal( name, img, description, url, lugarA, lugarB, lugarC, lugarD, DescripA, DescripB, DescripC, DescripD ) {
+function showModal( name, img, titular,description, url, lugarA, lugarB, lugarC, lugarD, DescripA, DescripB, DescripC, DescripD ) {
 
     const modal = document.getElementById("myModal");
     const placeName = document.getElementById("place-name");
@@ -249,9 +249,10 @@ function showModal( name, img, description, url, lugarA, lugarB, lugarC, lugarD,
     const placeImg4 = document.getElementById("place-img4");
     const placethumb1 = document.getElementById ("thumb1");
     const placethumb2 = document.getElementById ("thumb2");
-    const placethumb3 = document.getElementById ("thumb3");
-    const placethumb4 = document.getElementById ("thumb4");
+    // const placethumb3 = document.getElementById ("thumb3");
+    // const placethumb4 = document.getElementById ("thumb4");
     const placeDescription = document.getElementById("place-description");
+    const placeTitular = document.getElementById("place-titular");
     // const lugar1 = document.getElementById("lugar1");
     // const lugar2 = document.getElementById("lugar2");
     // const lugar3 = document.getElementById("lugar3");
@@ -269,8 +270,9 @@ function showModal( name, img, description, url, lugarA, lugarB, lugarC, lugarD,
     placeImg4.src = img[3];
     placethumb1.src = img[0];
     placethumb2.src = img[1];
-    placethumb3.src = img[2];
-    placethumb4.src = img[3];
+    // placethumb3.src = img[2];
+    // placethumb4.src = img[3];
+    placeTitular.textContent = titular;
     placeDescription.textContent = description;
 
     // lugar1.textContent = lugarA;

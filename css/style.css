@@ -291,14 +291,20 @@ button:hover {
     animation: fadeIn 1.5s; /* Animación de aparición */
     overflow: auto;
 }
-.column {
- 
+  .column-text {
     width: 100%;
     margin: 15px;  /* Margen entre columnas */
     background-color: transparent; /* Color de fondo de las columnas */
     align-items: center;
+  }
 
-}
+  .column-photo {
+    width: 100%;
+    margin: 15px;  /* Margen entre columnas */
+    background-color: transparent; /* Color de fondo de las columnas */
+    align-items: center;
+  }
+
 .up {
     max-width: 800px;
     align-items: center;
@@ -431,8 +437,8 @@ button:hover {
         gap: 10px; /* Espacio entre las columnas */
     }
 
-    .slide {
-        width: 100%;
+    .column-text {
+        margin: 15px 0px 15px 0px;
     }
 }
 

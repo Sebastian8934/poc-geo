@@ -32,7 +32,7 @@ var json_Puntosturisticos_3 = [
           id: 2,
           NOMBRE: "BARRANQUILLA",
           description:`La vibrante "Puerta de Oro de Colombia". Ciudad que late al ritmo del Río Magdalena y el Mar Caribe, famosa por su gente alegre y el calor de sus días. Es una ciudad moderna, con el Gran Malecón del Río, que irradia magia, y un legado histórico que se refleja en sus emblemáticos barrios. El Barrio Abajo representa sus tradiciones y raíces, mientras que El Prado enaltece su arquitectura. Barranquilla es hogar de personas cálidas y hospitalarias que reciben a todos con los brazos abiertos y una sonrisa.`,
-          titular:"DONDE EL MAR ABRAZA EL RÍO",
+          titular:"DONDE EL MAR ABRAZA EL RÍO 1",
           // lugarA: "Zoológico de barranquilla",
           // DescripA:"El zoológico de Barranquilla mantiene diversas especies animales para la contemplación del público en Barranquilla, Colombia. Operado por la La Fundación Botánica y Zoológica de Barranquilla",
           // lugarB: "Monumento ventana del mundo",

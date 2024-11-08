@@ -60,6 +60,7 @@ button {
     justify-content: center;
     margin-top: 10px;
 }
+
 .thumbnails .thumb {
     width: 80px; /* Ancho de las miniaturas */
     height: auto;
@@ -428,6 +429,10 @@ button:hover {
         display: flex;
         flex-wrap: wrap; /* Permitir que los elementos se muevan a la siguiente línea si es necesario */
         gap: 10px; /* Espacio entre las columnas */
+    }
+
+    .slide {
+        width: 100%;
     }
 }
 

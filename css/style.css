@@ -440,6 +440,10 @@ button:hover {
     .column-text {
         margin: 15px 0px 15px 0px;
     }
+
+    .column-photo {
+        margin: 0px;
+    }
 }
 
 /* Pantallas medianas (tabletas) */

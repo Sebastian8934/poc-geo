@@ -245,8 +245,8 @@ function showModal( name, img, titular,description, url, lugarA, lugarB, lugarC,
     const placeName = document.getElementById("place-name");
     const placeImg1 = document.getElementById("place-img1");
     const placeImg2 = document.getElementById("place-img2");
-    const placeImg3 = document.getElementById("place-img3");
-    const placeImg4 = document.getElementById("place-img4");
+    // const placeImg3 = document.getElementById("place-img3");
+    // const placeImg4 = document.getElementById("place-img4");
     const placethumb1 = document.getElementById ("thumb1");
     const placethumb2 = document.getElementById ("thumb2");
     // const placethumb3 = document.getElementById ("thumb3");
@@ -266,8 +266,8 @@ function showModal( name, img, titular,description, url, lugarA, lugarB, lugarC,
     placeName.textContent = name;
     placeImg1.src = img[0];
     placeImg2.src = img[1];
-    placeImg3.src = img[2];
-    placeImg4.src = img[3];
+    // placeImg3.src = img[2];
+    // placeImg4.src = img[3];
     placethumb1.src = img[0];
     placethumb2.src = img[1];
     // placethumb3.src = img[2];
@@ -317,7 +317,6 @@ function showSlide(index) {
     } else {
         currentSlide = index;
     }
-
     const offset = -currentSlide *100 ;
     document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
 }

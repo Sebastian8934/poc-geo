@@ -395,15 +395,16 @@
       bounds_group.addLayer(layer_Ruta_4);
       map.addLayer(layer_Ruta_4);
 
-      var baseMaps = {};
-      var overlaysTree = [
-        { label: "Waze (World)", layer: layer_WazeWorld_1 },
-        // { label: "ESRI Satellite", layer: layer_ESRISatellite_0 },
-      ];
-      var lay = L.control.layers.tree(null, overlaysTree, {
-        collapsed: true,
-      });
-      lay.addTo(map);
+      // var baseMaps = {};
+      // var overlaysTree = [
+      //   // { label: "Waze (World)", layer: layer_WazeWorld_1 },
+      //   // { label: "ESRI Satellite", layer: layer_ESRISatellite_0 },
+      // ];
+      // var lay = L.control.layers.tree(null, overlaysTree, {
+      //   collapsed: true,
+      // });
+      // lay.addTo(map);
+
       setBounds();
       var i = 0;
       layer_Mun_atlantico_2.eachLayer(function (layer) {

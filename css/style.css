@@ -171,9 +171,24 @@ h4 {
     padding-bottom: 15px;
 }
 
-p {
-    font-family: "Montserrat", sans-serif;
+.column-text .column-text-name {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    padding-bottom: 15px;
+}
+
+.column-text .column-text-title {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
     font-weight: 500;
+    color: #AA3210;
+    padding-bottom: 15px;
+}
+
+.column-text .column-text-description {
+    font-family: "Quicksand", sans-serif;
     font-size: 22px;
     line-height: 29px;
     color: #000000;
@@ -186,17 +201,17 @@ a#place-url {
     text-decoration: none;
     color: #ffffff; /* Color del enlace */
     /* background-color: rgba(44, 50, 58, 255); */
-    background-color: rgba(100, 5, 5, 0.8);
+    background-color: #AA3210;
     padding: 10px 15px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-top: 20px;
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 a#place-url:hover {
-    background-color: rgba(100, 5, 5, 0.8); /* Fondo al pasar el mouse */
+    background-color: #AA3210; /* Fondo al pasar el mouse */
     color: #fff; /* Color del texto al pasar el mouse */
 }
 
@@ -259,7 +274,7 @@ a#place-url:hover {
 }
 
 button:hover {
- background-color: rgba(100, 5, 5, 0.8);
+ background-color: #AA3210;
 }
 
 .modal {
@@ -396,8 +411,6 @@ button:hover {
     .popup-content {
         text-align: center;
     }
-
-
 
 /* Responsive */
 

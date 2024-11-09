@@ -5,8 +5,8 @@ var json_Puntosturisticos_3 = [
         type: "Feature",
         properties: {
           id: 2,
-          NOMBRE: "PUERTO COLOMBIA",
-          titular:"VENTANA A LA HISTORIA, PUERTA AL PROGRESO",
+          NOMBRE: "Puerto colombia",
+          titular:"Ventana a la historia, puerta al progreso",
           description:`El lugar más pintoresco a orillas del Mar Caribe, famoso por su antiguo muelle, que en su época fue la puerta de entrada de la modernidad al país. Sus playas ofrecen arenas suaves y aguas que reflejan el carácter del Caribe, siendo un destino ideal para los amantes de los deportes náuticos. Aquí, la historia y la belleza natural se encuentran en un ambiente de alegría, con lugares emblemáticos como el Muelle 1888 y la Estación del Ferrocarril. Las artesanías en madera náufraga y la gastronomía local reflejan la cercanía al mar y la riqueza de sabores del Caribe."`,
           url:"https://tesorosdelatlantico.com/tesoro/pto-colombia/",
           img:[

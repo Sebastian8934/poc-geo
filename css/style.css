@@ -176,12 +176,13 @@ h4 {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
+    color: #3E160F;
     padding-bottom: 15px;
 }
 
 .column-text .column-text-title {
     font-family: "Quicksand", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     color: #AA3210;
     padding-bottom: 15px;
@@ -189,8 +190,7 @@ h4 {
 
 .column-text .column-text-description {
     font-family: "Nunito Sans", sans-serif;
-    font-size: 22px;
-    line-height: 29px;
+    font-size: 18px;
     color: #000000;
 }
 
@@ -455,6 +455,13 @@ button:hover {
 
     .column-photo {
         margin: 0px;
+    }
+
+    .column-text .column-text-description {
+        font-family: "Nunito Sans", sans-serif;
+        /* font-size: 22px; */
+        /* line-height: 29px; */
+        color: #000000;
     }
 }
 
